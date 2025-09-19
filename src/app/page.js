@@ -1,7 +1,6 @@
 // import Awards from "@/components/home/Awards";
 import Clients from "@/components/home/Clients";
 import Founders from "@/components/home/Founders";
-import Impact from "@/components/home/Impact";
 import Intro from "@/components/home/Intro";
 import Investors from "@/components/home/Investors";
 import Leadership from "@/components/home/Leadership";
@@ -9,6 +8,7 @@ import Mission from "@/components/home/Mission";
 import Principles from "@/components/home/Principles";
 import Testmonials from "@/components/home/Testmonials";
 import Verticals from "@/components/home/Verticals";
+import Foundation from "@/components/home/Foundation";
 
 
 export default function Home() {
@@ -17,12 +17,12 @@ export default function Home() {
       <Intro />
       <Mission />
       <Verticals />
-      <Impact />
+      <Foundation />
       {/* <Awards /> */}
       <Principles />
       <Founders />
-      <Leadership />
-      <Investors />
+      {/* <Leadership />
+      <Investors /> */}
       <Testmonials />
       <Clients />
     </div>

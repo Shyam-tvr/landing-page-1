@@ -21,7 +21,7 @@ const content = [
 
 const Testimonials = () => {
   return (
-    <section className="px-4 md:px-16 py-16 bg-black container mx-auto">
+    <section className="py-16 px-16 bg-black container xl:mx-auto">
       <div className="max-w-4xl mx-auto text-center space-y-4">
         <h1 className="font-anton text-[#FCD901] text-2xl md:text-3xl">
           Voices of Support{" "}
@@ -40,27 +40,29 @@ const Testimonials = () => {
           <div className="flex gap-8">
             {[...content, ...content].map((item, index) => (
               <div key={index} className="px-4">
-                <div className="shrink-0 p-8 w-full md:w-[44rem] bg-gradient-to-br from-black/0 to-[#FCD901]/20 rounded-2xl border-[0.5px] border-[#FCD901] space-y-4 h-full">
-                  <div className="w-20 h-20 relative">
-                    <Image
-                      src="/icons/quotes-left.svg"
-                      alt="Quotes-left"
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
+                <div className="shrink-0 p-8 md:w-[24rem] lg:w-[36rem] xl:w-[44rem] bg-gradient-to-br from-black/0 to-[#FCD901]/20 rounded-2xl border-[0.5px] border-[#FCD901] space-y-4 h-full">
+                <div className="flex flex-col h-full justify-between gap-4">
+                  <div>
+                    <div className="relative md:w-10 md:h-10 lg:w-15 lg:h-15 xl:w-20 xl:h-20 ">
+                      <Image
+                        src="/icons/quotes-left.svg"
+                        alt="Quotes-left"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
 
-                  {/* Message */}
-                  <div className="min-h-[9rem]">
-                    <p className="text-white text-lg leading-8 font-quattro">
-                      {item.message}
-                    </p>
+                    {/* Message */}
+                    <div className="lg:min-h-[5rem] xl:min-h-[9rem] mt-4">
+                      <p className="text-white xl:text-xl xl:leading-8 font-quattro text-justify">
+                        {item.message}
+                      </p>
+                    </div>
                   </div>
-
                   {/* Profile + right quote */}
                   <div className="flex justify-between items-end">
                     <div>
-                      <div className="w-24 h-24 rounded-full overflow-hidden relative mb-4">
+                      <div className="rounded-full overflow-hidden relative mb-4 w-16 h-16 xl:w-24 xl:h-24 ">
                         <Image
                           src={item.image}
                           alt={item.name}
@@ -68,7 +70,7 @@ const Testimonials = () => {
                           className="object-cover"
                         />
                       </div>
-                      <p className="text-white text-2xl font-quattro">
+                      <p className="text-white font-quattro lg:text-xl xl:text-2xl ">
                         {item.name}
                       </p>
                       <p className="text-white text-xs font-quattro">
@@ -84,6 +86,8 @@ const Testimonials = () => {
                       />
                     </div>
                   </div>
+
+                </div>
                 </div>
               </div>
             ))}

@@ -6,6 +6,10 @@
   --font-quattro: var(--font-quattro), sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @keyframes marqueeLoop {
   0% {
     transform: translateX(0%);

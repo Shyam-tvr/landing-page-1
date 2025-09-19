@@ -19,8 +19,8 @@ const Navbar = () => {
       <div className="flex items-center space-x-4 sm:space-x-4 lg:space-x-8">
         <div className="hidden md:flex space-x-4 sm:space-x-4 lg:space-x-8 px-3 sm:px-4 py-1 bg-[#2b2b2b] rounded-lg">
           <Link
-            href=""
-            className="text-white font-thin text-sm sm:text-base"
+            href="#verticals"
+            className="text-white font-thin text-sm sm:text-base scroll-smooth"
           >
             Verticals
           </Link>

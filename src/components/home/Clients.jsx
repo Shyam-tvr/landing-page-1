@@ -58,7 +58,7 @@ const Clients = () => {
       </div>
       <div className="mt-12 overflow-hidden">
         <div className="marquee-content">
-          <div className="flex gap-8">
+          <div className="flex gap-8 items-center">
             {
                 [...ClientsData, ...ClientsData].map((item,index)=>(
                     <div key={index}>
