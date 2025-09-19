@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-anton: var(--font-anton), sans-serif;
+  --font-roboto: var(--font-roboto), sans-serif;
+  --font-quattro: var(--font-quattro), sans-serif;
+}
+
+@keyframes marqueeLoop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marqueeLoop 30s linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
