@@ -18,7 +18,7 @@ return (
           An Extension of{" "}
           <span className="text-[#FCD901]">Human Potential</span>
         </h1>
-        <p className="text-white text-sm lg:text-base leading-relaxed text-justify">
+        <p className="text-white text-sm lg:text-base md:leading-relaxed text-justify">
           We are forging the future where robotics and AI become an extension of
           human potential. With relentless research in humanoid robotics,
           assistive technology, and automation, we are not just building new
