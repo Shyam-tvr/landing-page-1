@@ -35,10 +35,7 @@ const verticalsData = [
 
 const Verticals = () => {
   return (
-    <section
-      id="verticals"
-      className="relative px-4 md:px-12 py-8 lg:pt-48"
-    >
+    <section id="verticals" className="relative lg:w-full lg:aspect-9/16 px-4 md:px-12 py-8 lg:pt-36">
       {/* Background image */}
       <Image
         src="/home/g-building.png"
@@ -62,7 +59,7 @@ const Verticals = () => {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-8 mt-12 container mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-8 mt-12 xl:mt-24 container mx-auto">
         {verticalsData.map((vertical, index) => (
           <div key={index} className="relative min-h-[440px] rounded-xl">
             <div
@@ -70,14 +67,14 @@ const Verticals = () => {
             >
               <div className="h-full w-full bg-black rounded-xl p-2 flex flex-col">
                 {/* Image */}
-                <Image
-                  src={vertical.img}
-                  alt={vertical.title}
-                  width={300}
-                  height={200}
-                  className="object-cover rounded-lg"
-                />
-
+                <div className="w-full h-48 relative">
+                  <Image
+                    src={vertical.img}
+                    alt={vertical.title}
+                    fill
+                    className="object-cover rounded-lg"
+                  />
+                </div>
                 {/* Text content */}
                 <div className="flex-grow flex flex-col justify-between mt-4 mx-2">
                   <div className="space-y-4">

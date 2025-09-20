@@ -21,71 +21,76 @@ const content = [
 
 const Testimonials = () => {
   return (
-    <section className="px-4 py-16 md:py-16 md:px-16 bg-black container xl:mx-auto">
-      <div className="max-w-4xl mx-auto text-center space-y-4">
-        <h1 className="font-anton text-[#FCD901] text-2xl md:text-3xl">
+    <section className="px-4 py-16 md:px-16 2xl:px-0 bg-black container mx-auto">
+      {/* Heading */}
+      <div className="max-w-5xl mx-auto text-center space-y-4">
+        <h1 className="font-anton text-[#FCD901] text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl">
           Voices of Support{" "}
-          <span className="text-white">What Leaders Are Saying</span>
+          <span className="text-white block 2xl:inline">
+            What Leaders Are Saying
+          </span>
         </h1>
-        <p className="text-white md:text-lg">
+        <p className="text-white text-sm md:text-lg 2xl:text-xl">
           Our values are the bedrock of our culture and the blueprint for our
-          actions. They guide every decision we make and every technology we create.
+          actions. They guide every decision we make and every technology we
+          create.
         </p>
       </div>
 
-      <div className="mt-12 overflow-hidden">
+      {/* Scrolling Testimonials */}
+      <div className="mt-12 2xl:mt-24 overflow-hidden">
+        {/* wider wrapper only on 2xl */}
         <div className="marquee-content">
           <div className="flex gap-8">
             {[...content, ...content].map((item, index) => (
-              <div key={index} className="px-4">
-                <div className="shrink-0 p-6 md:p-8 w-[20rem] md:w-[24rem] lg:w-[36rem] xl:w-[44rem] bg-gradient-to-br from-black/0 to-[#FCD901]/20 rounded-2xl border-[0.5px] border-[#FCD901] space-y-4 h-full">
-                <div className="flex flex-col h-full justify-between gap-4">
-                  <div>
-                    <div className="relative w-10 h-10 lg:w-15 lg:h-15 xl:w-20 xl:h-20 ">
-                      <Image
-                        src="/icons/quotes-left.svg"
-                        alt="Quotes-left"
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-
-                    {/* Message */}
-                    <div className="min-h-16 md:min-h-[5rem] xl:min-h-[9rem] mt-4">
-                      <p className="text-white text-sm xl:text-xl xl:leading-8 font-quattro text-justify">
+              <div key={index} className="shrink-0">
+                <div className="p-6 md:p-8 w-[20rem] md:w-[28rem] lg:w-[36rem] xl:w-[44rem] bg-gradient-to-br from-black/0 to-[#FCD901]/20 rounded-2xl border border-[#FCD901]/50 space-y-6 h-full">
+                  <div className="flex flex-col justify-between h-full gap-6">
+                    
+                    {/* Top quote + message */}
+                    <div>
+                      <div className="relative w-10 h-10 xl:w-14 xl:h-14">
+                        <Image
+                          src="/icons/quotes-left.svg"
+                          alt="Opening quote"
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                      <p className="text-white text-sm md:text-base xl:text-xl xl:leading-8 font-quattro mt-4 text-justify">
                         {item.message}
                       </p>
                     </div>
-                  </div>
-                  {/* Profile + right quote */}
-                  <div className="flex justify-between items-end">
-                    <div>
-                      <div className="rounded-full overflow-hidden relative mb-2  md:mb-4 w-16 h-16 xl:w-24 xl:h-24 ">
+
+                    {/* Profile + closing quote */}
+                    <div className="flex justify-between items-end">
+                      <div>
+                        <div className="relative w-16 h-16 xl:w-20 xl:h-20 rounded-full overflow-hidden mb-3">
+                          <Image
+                            src={item.image}
+                            alt={item.name}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                        <p className="text-white font-quattro text-base md:text-lg xl:text-xl">
+                          {item.name}
+                        </p>
+                        <p className="text-white text-xs md:text-sm opacity-80">
+                          {item.designation}
+                        </p>
+                      </div>
+                      <div className="relative w-12 h-12 md:w-16 md:h-16 xl:w-20 xl:h-20">
                         <Image
-                          src={item.image}
-                          alt={item.name}
+                          src="/icons/quotes-right.svg"
+                          alt="Closing quote"
                           fill
-                          className="object-cover"
+                          className="object-contain"
                         />
                       </div>
-                      <p className="text-white font-quattro lg:text-xl xl:text-2xl ">
-                        {item.name}
-                      </p>
-                      <p className="text-white text-xs font-quattro">
-                        {item.designation}
-                      </p>
                     </div>
-                    <div className="w-15 h-15 md:w-24 md:h-24 relative">
-                      <Image
-                        src="/icons/quotes-right.svg"
-                        alt="Quotes-right"
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                  </div>
 
-                </div>
+                  </div>
                 </div>
               </div>
             ))}

@@ -42,34 +42,35 @@ const principlesData = [
 const Principles = () => {
   return (
     <section className="my-24 md:my-48 px-4 flex flex-col justify-center items-center">
-      <div className="w-full md:w-2xl mx-auto text-center space-y-4">
-        <h1 className="font-anton text-[#FCD901] text-2xl md:text-3xl lg:text-3xl">
+      {/* Top Content */}
+      <div className="w-full max-w-6xl mx-auto text-center space-y-4">
+        <h1 className="font-anton text-[#FCD901] text-2xl md:text-3xl lg:text-4xl">
           Our Guiding Principles{" "}
           <span className="text-white">Our Core Values</span>
         </h1>
-        <p className="text-white text-sm lg:text-base leading-relaxed">
+        <p className="text-white text-sm md:text-base lg:text-lg leading-relaxed">
           Our values are the bedrock of our culture and the blueprint for our
-          actions. They guide every
-          <br />
-          decision we make and every technology we create.
+          actions. They guide every decision we make and every technology we
+          create.
         </p>
       </div>
 
-      <div className="w-full flex flex-wrap justify-center gap-8 mt-12">
+      {/* Cards - Flex Wrap */}
+      <div className="w-full max-w-6xl flex flex-wrap justify-center gap-8 mt-12">
         {principlesData.map((principle, index) => (
           <div
             key={index}
             className="
-              relative h-[300px] rounded-xl 
-              w-full 
-              md:w-1/3 
-              lg:w-1/4
+              relative h-[300px] md:h-[340px] lg:h-[380px] 
+              w-full md:w-[48%] lg:w-[30%] 
+              rounded-xl
             "
           >
             <div
               className={`absolute inset-0 rounded-xl p-[0.5px] ${principle.gradient}`}
             >
               <div className="relative h-full w-full bg-black rounded-xl p-8 flex flex-col items-center justify-between">
+                {/* Icon */}
                 <div className="h-20 flex items-center justify-center">
                   <Image
                     src={principle.icon}
@@ -79,11 +80,13 @@ const Principles = () => {
                     className="mx-auto object-contain"
                   />
                 </div>
+
+                {/* Text */}
                 <div className="flex-1 flex flex-col justify-center mt-4">
-                  <p className="text-white text-center text-xl font-anton">
+                  <p className="text-white text-center text-lg md:text-xl lg:text-2xl font-anton">
                     {principle.title}
                   </p>
-                  <p className="text-[#cacaca] text-base leading-6 font-extralight text-center mt-2">
+                  <p className="text-[#cacaca] text-sm md:text-base lg:text-lg leading-6 font-extralight text-center mt-2">
                     {principle.desc}
                   </p>
                 </div>
@@ -95,5 +98,6 @@ const Principles = () => {
     </section>
   );
 };
+
 
 export default Principles;
