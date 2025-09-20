@@ -24,17 +24,17 @@ const Testimonials = () => {
     <section className="px-4 py-16 md:px-16 2xl:px-0 bg-black container mx-auto">
       {/* Heading */}
       <div className="max-w-5xl mx-auto text-center space-y-4">
-        <h1 className="font-anton text-[#FCD901] text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl">
+        <h1 className="font-anton text-[#FCD901]">
           Voices of Support{" "}
           <span className="text-white block 2xl:inline">
             What Leaders Are Saying
           </span>
         </h1>
-        <p className="text-white text-sm md:text-lg 2xl:text-xl">
+        <h4 className="text-white">
           Our values are the bedrock of our culture and the blueprint for our
           actions. They guide every decision we make and every technology we
           create.
-        </p>
+        </h4>
       </div>
 
       {/* Scrolling Testimonials */}
@@ -57,9 +57,9 @@ const Testimonials = () => {
                           className="object-contain"
                         />
                       </div>
-                      <p className="text-white text-sm md:text-base xl:text-xl xl:leading-8 font-quattro mt-4 text-justify">
+                      <h4 className="text-white xl:leading-8 font-quattro mt-4 text-justify">
                         {item.message}
-                      </p>
+                      </h4>
                     </div>
 
                     {/* Profile + closing quote */}
@@ -73,12 +73,12 @@ const Testimonials = () => {
                             className="object-cover"
                           />
                         </div>
-                        <p className="text-white font-quattro text-base md:text-lg xl:text-xl">
+                        <h3 className="text-white font-quattro">
                           {item.name}
-                        </p>
-                        <p className="text-white text-xs md:text-sm opacity-80">
+                        </h3>
+                        <h6 className="text-white opacity-80">
                           {item.designation}
-                        </p>
+                        </h6>
                       </div>
                       <div className="relative w-12 h-12 md:w-16 md:h-16 xl:w-20 xl:h-20">
                         <Image

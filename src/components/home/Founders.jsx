@@ -36,7 +36,7 @@ const Founders = () => {
                 </div>
               ))}
             </div>
-            <p className="md:mx-16 xl:mx-32 2xl:mx-60 my-4 md:my-10 text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl text-white/70 text-justify max-w-7xl 2xl:max-w-[1400px] mx-auto leading-relaxed">
+            <p className="md:mx-16 xl:mx-32 2xl:mx-60 my-2 md:my-10 text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl text-white/70 text-justify max-w-7xl 2xl:max-w-[1400px] mx-auto xl:leading-relaxed">
               Genrobotics is led by visionary leaders who are dedicated to using
               robotics for positive change. Our team of engineers, researchers,
               and experts combines technical skills with a strong commitment to

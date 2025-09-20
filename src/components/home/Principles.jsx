@@ -46,13 +46,13 @@ const Principles = () => {
       <div className="w-full max-w-6xl mx-auto text-center space-y-4">
         <h1 className="font-anton text-[#FCD901] text-2xl md:text-3xl lg:text-4xl">
           Our Guiding Principles{" "}
-          <span className="text-white">Our Core Values</span>
+          <span className="text-white block md:inline">Our Core Values</span>
         </h1>
-        <p className="text-white text-sm md:text-base lg:text-lg leading-relaxed">
+        <h4 className="text-white leading-relaxed">
           Our values are the bedrock of our culture and the blueprint for our
           actions. They guide every decision we make and every technology we
           create.
-        </p>
+        </h4>
       </div>
 
       {/* Cards - Flex Wrap */}
@@ -67,7 +67,7 @@ const Principles = () => {
             "
           >
             <div
-              className={`absolute inset-0 rounded-xl p-[0.5px] ${principle.gradient}`}
+              className={`absolute inset-0 rounded-xl p-[0.5px] hidden lg:block ${principle.gradient}`}
             >
               <div className="relative h-full w-full bg-black rounded-xl p-8 flex flex-col items-center justify-between">
                 {/* Icon */}
@@ -83,15 +83,37 @@ const Principles = () => {
 
                 {/* Text */}
                 <div className="flex-1 flex flex-col justify-center mt-4">
-                  <p className="text-white text-center text-lg md:text-xl lg:text-2xl font-anton">
+                  <h3 className="text-white text-center text-lg md:text-xl lg:text-2xl font-anton">
                     {principle.title}
-                  </p>
-                  <p className="text-[#cacaca] text-sm md:text-base lg:text-lg leading-6 font-extralight text-center mt-2">
+                  </h3>
+                  <h5 className="text-[#cacaca] text-sm md:text-base lg:text-lg leading-6 font-extralight text-center mt-2">
                     {principle.desc}
-                  </p>
+                  </h5>
                 </div>
               </div>
             </div>
+            <div className="lg:hidden relative h-full w-full bg-black border-[0.25px] border-[#FCD901] rounded-xl p-8 flex flex-col items-center justify-between">
+                {/* Icon */}
+                <div className="h-20 flex items-center justify-center">
+                  <Image
+                    src={principle.icon}
+                    alt={principle.title}
+                    width={principle.iconWidth}
+                    height={85}
+                    className="mx-auto object-contain"
+                  />
+                </div>
+
+                {/* Text */}
+                <div className="flex-1 flex flex-col justify-center mt-4">
+                  <h3 className="text-white text-center text-lg md:text-xl lg:text-2xl font-anton">
+                    {principle.title}
+                  </h3>
+                  <h5 className="text-[#cacaca] text-sm md:text-base lg:text-lg leading-6 font-extralight text-center mt-2">
+                    {principle.desc}
+                  </h5>
+                </div>
+              </div>
           </div>
         ))}
       </div>

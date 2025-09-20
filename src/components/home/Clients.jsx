@@ -49,14 +49,14 @@ const Clients = () => {
     <section className="px-4 md:px-16 py-16">
       {/* Heading */}
       <div className="w-full max-w-2xl mx-auto text-center space-y-4 2xl:max-w-4xl">
-        <h1 className="font-anton text-[#FCD901] text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl mt-12">
+        <h1 className="font-anton text-[#FCD901] mt-12">
           Our Esteemed Clients{" "}
-          <span className="text-white">Across Verticals</span>
+          <span className="text-white block md:inline">Across Verticals</span>
         </h1>
-        <p className="text-white text-sm md:text-base lg:text-lg 2xl:text-xl">
+        <h4 className="text-white">
           We are privileged to partner with a diverse range of organizations
           across various sectors.
-        </p>
+        </h4>
       </div>
 
       {/* Scrolling logos */}

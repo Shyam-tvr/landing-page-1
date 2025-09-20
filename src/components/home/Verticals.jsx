@@ -38,7 +38,7 @@ const Verticals = () => {
     <section id="verticals" className="relative lg:w-full lg:aspect-9/16 px-4 md:px-12 py-8 lg:pt-36">
       {/* Background image */}
       <Image
-        src="/home/g-building.png"
+        src="/home/gbuilding.jpg"
         alt="Verticals background"
         fill
         priority
@@ -46,16 +46,14 @@ const Verticals = () => {
       />
 
       {/* Top content */}
-      <div className="w-full md:w-xl mx-auto text-center space-y-4 md:mt-8">
+      <div className="w-full md:w-xl lg:w-2xl xl:w-4xl mx-auto text-center space-y-4 md:mt-8">
         <h1 className="font-anton text-[#FCD901] text-2xl md:text-3xl lg:text-3xl">
           Our Ecosystem <span className="text-white">A Hub of innovation</span>
         </h1>
-        <p className="text-white text-sm lg:text-base leading-relaxed">
+        <h4 className="text-white leading-relaxed">
           Genrobotics is more than a company; it's an ecosystem of specialized
-          divisions,
-          <br />
-          each tackling critical challenges in its respective industry
-        </p>
+          divisions,each tackling critical challenges in its respective industry
+        </h4>
       </div>
 
       {/* Grid */}
@@ -78,12 +76,12 @@ const Verticals = () => {
                 {/* Text content */}
                 <div className="flex-grow flex flex-col justify-between mt-4 mx-2">
                   <div className="space-y-4">
-                    <p className="text-[#FCD901] text-center text-xl uppercase">
+                    <h3 className="text-[#FCD901] text-center uppercase">
                       {vertical.title}
-                    </p>
-                    <p className="text-[#cacaca] leading-6 text-sm font-extralight text-justify">
+                    </h3>
+                    <h5 className="text-[#cacaca] leading-6 font-extralight text-justify">
                       {vertical.desc}
-                    </p>
+                    </h5>
                   </div>
 
                   {/* Subtitle Link pinned at bottom */}
