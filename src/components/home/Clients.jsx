@@ -47,7 +47,7 @@ const ClientsData = [
 const Clients = () => {
   return (
     <section className="px-4 md:px-16 py-16 2xl:container 2xl:mx-auto">
-      <div className="w-2xl mx-auto text-center space-y-4">
+      <div className="w-full md:w-2xl mx-auto text-center space-y-4">
         <h1 className="font-anton text-[#FCD901] text-2xl md:text-3xl text-center mt-12">
           Our Esteemed Clients{" "}
           <span className="text-white">Across Verticals</span>

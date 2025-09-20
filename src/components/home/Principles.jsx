@@ -41,8 +41,8 @@ const principlesData = [
 
 const Principles = () => {
   return (
-    <section className="my-48 flex flex-col justify-center items-center">
-      <div className="w-2xl mx-auto text-center space-y-4">
+    <section className="my-24 md:my-48 px-4 flex flex-col justify-center items-center">
+      <div className="w-full md:w-2xl mx-auto text-center space-y-4">
         <h1 className="font-anton text-[#FCD901] text-2xl md:text-3xl lg:text-3xl">
           Our Guiding Principles{" "}
           <span className="text-white">Our Core Values</span>

@@ -17,7 +17,7 @@ export default function Home() {
       <Intro />
       <Mission />
       <Verticals />
-      <Foundation />
+      {/* <Foundation /> */}
       {/* <Awards /> */}
       <Principles />
       <Founders />

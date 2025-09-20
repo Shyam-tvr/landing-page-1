@@ -9,11 +9,11 @@ return (
         alt="Intro background"
         width={1920}
         height={1080}
-        className="w-full h-auto z-10 object-cover"
+        className="w-full h-screen md:h-auto z-10 object-cover"
         priority
       />
 
-      <div className="absolute inset-0 flex flex-col items-center px-4 text-center max-w-xl mx-auto space-y-4 md:mt-36 lg:mt-40 xl:mt-56 lg:max-w-3xl lg:space-y-8">
+      <div className="absolute inset-0 flex flex-col items-center px-4 text-center max-w-xl mx-auto space-y-4 mt-24 md:mt-36 lg:mt-40 xl:mt-56 lg:max-w-3xl lg:space-y-8">
         <h1 className="font-anton text-white text-2xl md:text-3xl lg:text-3xl">
           An Extension of{" "}
           <span className="text-[#FCD901]">Human Potential</span>
