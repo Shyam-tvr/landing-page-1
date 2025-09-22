@@ -3,7 +3,7 @@ import React from "react";
 
 const CraftingRobotics = () => {
   return (
-    <section className="relative">
+    <section className="relative hidden md:block">
       <div className="w-full aspect-16/9 relative">
         <Image
           src="/about/crafting-robotics.png"
