@@ -42,7 +42,7 @@ const leaders = [
 
 const Leadership = () => {
   return (
-    <section className="py-4 px-16 2xl:px-0 2xl:container 2xl:mx-auto">
+    <section className="py-4 px-4 md:px-16 2xl:px-0 2xl:container 2xl:mx-auto">
       <h1 className="font-anton text-white text-2xl md:text-3xl text-center mt-12">
         Meet <span className="text-[#FCD901]">Our Leadership</span>
       </h1>

@@ -47,3 +47,29 @@ h6 { font-size: clamp(0.75rem, 0.6vw + 0.25rem, 1rem); }  /* 12–16px */
 .container-fluid {
   @apply mx-auto px-4 w-full max-w-screen-xl;
 }
+.marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;          /* row layout */
+  flex-wrap: nowrap;      /* NO wrapping */
+  width: max-content;     /* track is as wide as children */
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+
+.marquee-right {
+  animation-direction: reverse;
+}
+
+.marquee-item {
+  flex: 0 0 auto;         /* don’t shrink, stay inline */
+  margin: 0 0.5rem;       /* same as mx-2 */
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%);}
+}

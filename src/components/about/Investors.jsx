@@ -3,40 +3,61 @@ import React from "react";
 
 const investorsData = [
   {
-    image: "/home/investors/uiv-founder.png",
+    image: "/about/investors/uiv-founder.png",
     company: "UIV",
-    logo: "/home/investors/uiv-logo.svg",
+    logo: "/about/investors/uiv-logo.svg",
     name: "Bhaskar Majumdar",
     designation: "Founder and Managing Partner",
   },
   {
-    image: "/home/investors/zoho-founder.png",
+    image: "/about/investors/zoho-founder.png",
     company: "zoho",
-    logo: "/home/investors/zoho-logo.svg",
+    logo: "/about/investors/zoho-logo.svg",
     name: "Sridhar Vembu",
     designation: "Chief  Founder",
   },
   {
-    image: "/home/investors/uiv-founder.png",
-    company: "UIV",
-    logo: "/home/investors/uiv-logo.svg",
-    name: "Bhaskar Majumdar",
+    image: "/about/investors/mahindra-founder.png",
+    company: "Mahindra",
+    logo: "/about/investors/mahindra-logo.svg",
+    name: "Anand Mahindra",
+    designation: "Chairperson",
+  },
+  {
+    image: "/about/investors/tally-founder.png",
+    company: "Tally",
+    logo: "/about/investors/tally-logo.svg",
+    name: "Nupur Goenka",
+    designation: "Co-Founder",
+  },
+  {
+    image: "/about/investors/edcite-founder.png",
+    company: "Edcite",
+    logo: "/about/investors/edcite-logo.svg",
+    name: "Tony G. Thomas",
+    designation: "Co-Founder",
+  },
+  {
+    image: "/about/investors/uiv-founder.png",
+    company: "uiv",
+    logo: "/about/investors/uiv-logo.svg",
+    name: "Anil Joshy",
     designation: "Founder and Managing Partner",
   },
   {
-    image: "/home/investors/zoho-founder.png",
-    company: "zoho",
-    logo: "/home/investors/zoho-logo.svg",
-    name: "Sridhar Vembu",
-    designation: "Chief  Founder",
-  },
-  {
-    image: "/home/investors/uiv-founder.png",
-    company: "UIV",
-    logo: "/home/investors/uiv-logo.svg",
-    name: "Bhaskar Majumdar",
+    image: "/about/investors/seafund-founder.png",
+    company: "sea fund",
+    logo: "/about/investors/seafund-logo.svg",
+    name: "Manoj Kumar Agarwal",
     designation: "Founder and Managing Partner",
   },
+  {
+    image: "/about/investors/peakxv-founder.png",
+    company: "peakxv",
+    logo: "/about/investors/peakxv-logo.svg",
+    name: "Rajan Anand",
+    designation: "Founder and Managing Partner",
+  }
 ];
 
 const Investors = () => {
