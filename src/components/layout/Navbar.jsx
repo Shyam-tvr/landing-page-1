@@ -32,7 +32,7 @@ const Navbar = () => {
           <Link href="" className="text-white font-thin text-sm sm:text-base">
             Careers
           </Link>
-          <Link href="" className="text-white font-thin text-sm sm:text-base">
+          <Link href="/about" className="text-white font-thin text-sm sm:text-base">
             About Us
           </Link>
         </div>
@@ -90,7 +90,7 @@ const Navbar = () => {
           <Link href="" className="text-white font-thin text-xl" onClick={() => setIsOpen(false)}>
             Careers
           </Link>
-          <Link href="" className="text-white font-thin text-xl" onClick={() => setIsOpen(false)}>
+          <Link href="/about" className="text-white font-thin text-xl" onClick={() => setIsOpen(false)}>
             About Us
           </Link>
           <Link
