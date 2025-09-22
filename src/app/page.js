@@ -2,13 +2,12 @@
 import Clients from "@/components/home/Clients";
 import Founders from "@/components/home/Founders";
 import Intro from "@/components/home/Intro";
-import Investors from "@/components/home/Investors";
-import Leadership from "@/components/home/Leadership";
 import Mission from "@/components/home/Mission";
 import Principles from "@/components/home/Principles";
 import Testmonials from "@/components/home/Testmonials";
 import Verticals from "@/components/home/Verticals";
 import Foundation from "@/components/home/Foundation";
+import Awards from "@/components/home/Awards";
 
 
 export default function Home() {
@@ -18,7 +17,7 @@ export default function Home() {
       <Mission />
       <Verticals />
       <Foundation />
-      {/* <Awards /> */}
+      <Awards />
       <Principles />
       <Founders />
       {/* <Leadership />

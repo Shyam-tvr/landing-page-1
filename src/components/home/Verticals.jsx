@@ -4,8 +4,8 @@ import React from "react";
 
 const verticalsData = [
   {
-    title: "Clean Tech",
-    desc: "With the Bandicoot robot, The Worlds First Robotic Scavenger, We are revolutionizing urban hygiene, eleminating manual scavenging, and ensuring worker safety.",
+    title: "Sanitation Tech",
+    desc: "Revolutionizing urban hygiene with the Bandicoot robot, eliminating hazardous confined space cleaning such as manhole, sewage, storm water drain etc. to ensure worker safety and dignity.",
     subtitle: "Step into the revolution",
     img: "/home/clean-tech.png",
     gradient: "bg-gradient-to-b from-[#FCD901] to-[#ffffff00]",

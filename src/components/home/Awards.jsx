@@ -1,198 +1,245 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
-
-import img1 from "@/assets/awards/new/Forbes 30 Under 30 Asia.jpg";
-import img2 from "@/assets/awards/AI Game Changers' award GPAI 1.png";
-import img3 from "@/assets/awards/new/Swachhata Stratup Challenge.jpg";
-import img4 from "@/assets/awards/new/Young Changemaker Award.jpg";
-import img5 from "@/assets/awards/INFOSYS AAROHAN SOCIAL INNOVATION AWARD.png";
-import img6 from "@/assets/awards/new/AMRUT Technology Award.jpg";
-import img7 from "@/assets/awards/new/BIRAC.jpg";
-import img8 from "@/assets/awards/new/Modi with Bandicoot to MERGE.jpg";
-import img9 from "@/assets/awards/Rectangle (3).png";
-import img11 from "@/assets/awards/new/Pride of Kerala.jpg";
-import img12 from "@/assets/awards/new/Level Next Award.jpg";
-import img13 from "@/assets/awards/new/FICCI Award 2019.jpg";
-import img14 from "@/assets/awards/new/Asia Inspiration Award.jpg";
-import img15 from "@/assets/awards/new/Anjani Mashelkar Inclusive Innovation Award.jpg";
-
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { CustomNextArrow, CustomPrevArrow } from "../CustomArrows";
 
-const awards = [
+const cards = [
   {
-    img: img2,
-    title: "Ranked in Top 3 AI Startup by MeitY",
-    subtitle: "For innovation in environmental robotics",
+    id: 1,
+    title: "Bandicoot 2.0 Launched",
+    desc: " Bandicoot 2.0 was launched in the presence of Hon'ble Prime Minister Shri Narendra Modi",
+    img: "/home/awards/award1.png",
   },
   {
-    img: img1,
-    title: "Forbes 30 Under 30",
-    subtitle: "Recognizing our visionary leadership",
+    id: 2,
+    title: "Excellence in Robotics",
+    desc: "Awarded for pioneering achievements in robotics automation.",
+    img: "/home/awards/award2.png",
   },
   {
-    img: img3,
-    title: "SWACHHATA STARTUP CHALLENGE",
-    subtitle: "For innovation in environmental robotics.",
+    id: 3,
+    title: "Global Impact Award",
+    desc: "Celebrating our positive influence on global urban hygiene.",
+    img: "/home/awards/award3.png",
   },
   {
-    img: img4,
-    title: "Awarded for Driving Change in Urban Sanitation",
-    subtitle: "Honored by Former Vice President Shri Venkaiah Naidu with the Young Changemaker Award 2020 for our contribution to safe sanitation through Bandicoot",
+    id: 4,
+    title: "YOUNG CHANGEMAKER AWARD",
+    desc: "For inventing the ‘Robotic Technology’",
+    img: "/home/awards/award4.png",
   },
   {
-    img: img5,
+    id: 5,
     title: "INFOSYS AAROHAN SOCIAL INNOVATION AWARD",
-    subtitle: "For the Revolutionary Product Bandicoot",
+    desc: "For the Revolutionary Product Bandicoot",
+    img: "/home/awards/award5.png",
   },
   {
-    img: img6,
-    title: "AMRUT Tech Challenge Award 2020",
-    subtitle:
-      "Recognized by the Ministry of Housing and Urban Affairs for Bandicoot, a breakthrough solution to end manual sewer cleaning.",
+    id: 6,
+    title: "AMRUT TECHNOLOGY AWARD",
+    desc: "For Promising Innovative Solution",
+    img: "/home/awards/award6.png",
   },
   {
-    img: img7,
-    title: "BIRAC Social Impact Award 2024",
-    subtitle:
-      "Presented by the Ministry of Science & Technology for the impactful innovations Bandicoot and Mobility+, eliminating manual scavenging and uplifting sanitation workers.",
+    id: 7,
+    title: "BIRAC INNOVATOR AWARD 2024",
+    desc: "For inventing the ‘Robotic Technology’",
+    img: "/home/awards/award7.png",
   },
   {
-    img: img8,
-    title: "Honored with the National Startup Award 2020",
-    subtitle:
-      "Awarded in the ‘Campus-Initiated Startups’ category by the Ministry of Commerce and Industry, for Bandicoot — the world’s first robot designed to eliminate human entry into sewers.",
-  },
-  // {
-  //   img: img9,
-  //   title: "Young Changemaker Award 2020",
-  //   subtitle: "For Promising Innovative Solution",
-  // },
-  {
-    img: img11,
-    title: "From Kerala, for the world",
-    subtitle: "We’re proud to be honored with the ‘Pride of Kerala’ award — the state’s highest startup recognition — by the Kerala Startup Mission at Huddle Global 2022. Presented by CM Shri Pinarayi Vijayan.",
+    id: 8,
+    title: "NATIONAL STARTUP AWARD",
+    desc: "For the Revolutionary Product Bandicoot",
+    img: "/home/awards/award8.png",
   },
   {
-    img: img12,
-    title: "The Level Next Award",
-    subtitle:
-      "Innovation is just the beginning — scaling impact is the mission. Grateful to receive the Level Next Award, honoring Genrobotics as one of India’s top scale-up champions.",
+    id: 9,
+    title: "YOUNG CHANGEMAKER AWARD 2020",
+    desc: "For Promising Innovative Solution",
+    img: "/home/awards/award9.png",
   },
   {
-    img: img13,
-    title: "FICCI Best Corporate Initiative Award",
-    subtitle:
-      "Our mission to end manual scavenging and modernize sanitation earned national recognition, with the FICCI Best Corporate Initiative Award 2019 at the India Sanitation Coalition.",
+    id: 10,
+    title: "ET STARTUP AWARDS 2021",
+    desc: "For inventing the ‘Robotic Technology’.",
+    img: "/home/awards/award10.png",
   },
   {
-    img: img14,
-    title: "Asia Inspiration Award",
-    subtitle:
-      "Grateful to IYC for honoring our work in transforming sanitation and replacing manual scavenging with dignity and technology.",
+    id: 11,
+    title: "PRIDE OF KERALA AWARD",
+    desc: "For the Revolutionary Product Bandicoot",
+    img: "/home/awards/award11.png",
   },
   {
-    img: img15,
-    title: "Innovation with purpose gets honored",
-    subtitle:
-      "Thank you, Dr. R.A. Mashelkar and NSIC, for awarding us the Anjani Mashelkar Inclusive Innovation Award 2019 — for Bandicoot and the movement to end manual scavenging.",
+    id: 12,
+    title: "LEVEL NXT AWARD FOR THE BEST STARTUP",
+    desc: "For ‘Promising Innovative Solution",
+    img: "/home/awards/award12.png",
+  },
+  {
+    id: 13,
+    title: "FICCI AWARD 2019",
+    desc: "For inventing the ‘Robotic Technology’",
+    img: "/home/awards/award13.png",
+  },
+  {
+    id: 14,
+    title: "ASIA INSPIRATION AWARD 2018",
+    desc: "For the Revolutionary Product Bandicoot",
+    img: "/home/awards/award14.png",
+  },
+  {
+    id: 15,
+    title: "ANJANI MASHELKAR INCLUSIVE INNOVATION AWARD",
+    desc: "For ‘Promising Innovative Solution",
+    img: "/home/awards/award15.png",
   },
 ];
 
-function Awards() {
-  const [activeSliderIndex, setActiveSliderIndex] = useState(0);
+const Awards = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const [visibleSlides, setVisibleSlides] = useState(3);
-
+  // Auto scroll
   useEffect(() => {
-    const handleResize = () => {
-      setVisibleSlides(window.innerWidth < 1024 ? 1 : 3);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    const interval = setInterval(() => {
+      handleNext();
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [activeIndex]);
 
-  const settings = {
-    centerMode: true,
-    centerPadding: "10px",
-    slidesToShow: 3,
-    arrows: true,
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    afterChange: (current) => {
-      setActiveSliderIndex(current);
-    },
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "0px",
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev - 1 + cards.length) % cards.length);
   };
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev + 1) % cards.length);
+  };
+
+  // Shared responsive sizes for image container
+  const imgContainer =
+    "relative w-[240px] h-[135px] sm:w-[360px] sm:h-[202px] md:w-[480px] md:h-[270px] lg:w-[640px] lg:h-[360px] xl:w-[800px] xl:h-[450px] 2xl:w-[960px] 2xl:h-[540px]";
+
   return (
-    <section className="recognitions_sec">
-      <div className="container-fluid">
-        <div className="lg:px-[90] ">
-          <div className="rec_wrapper">
-            <h1 className="title">Awards & Recognitions</h1>
-            <p className="subtitle">
-              Discover the tangible difference Genrobotics' solutions
-            </p>
-            <br />
-            <Slider {...settings}>
-              {awards.map((item, idx4) => {
-                return (
-                  <div className="slider_wrapper_sub" key={idx4}>
-                    <div
-                      className={
-                        idx4 == activeSliderIndex
-                          ? "card slider_card slick-center"
-                          : "card slider_card"
-                      }
-                    >
-                      <div className="image_wrapper">
-                        <Image
-                          src={item?.img}
-                          width={0}
-                          height={0}
-                          alt={item?.title}
-                        />
-                      </div>
-                      <h3>{item?.title}</h3>
-                      <p>{item?.subtitle}</p>
-                    </div>
+    <section className="my-24 md:my-48 px-4 flex flex-col justify-center items-center">
+      {/* Heading */}
+      <div className="w-full max-w-6xl mx-auto text-center space-y-4">
+        <h1 className="font-anton text-[#FCD901] text-2xl md:text-3xl lg:text-4xl">
+          Awards & Recognition
+        </h1>
+        <h4 className="text-white leading-relaxed">
+         Discover the tangible difference Genrobotics' solutions
+        </h4>
+      </div>
+
+      {/* Carousel */}
+      <div className="relative flex flex-col items-center w-full max-w-6xl mx-auto mt-12">
+        <div className="relative flex items-center justify-center w-full h-[540px] overflow-hidden">
+          {cards.map((card, index) => {
+            const position =
+              (index - activeIndex + cards.length) % cards.length;
+
+            let baseClasses =
+              "absolute rounded-xl shadow-lg overflow-hidden transition-all duration-500 bg-[#1b1b1b] flex flex-col items-center";
+
+            if (position === 0) {
+              // Active
+              return (
+                <div key={card.id} className={`${baseClasses} z-20`}>
+                  <div className={`${imgContainer}`}>
+                    <Image
+                      src={card.img}
+                      alt={card.title}
+                      fill
+                      className="object-contain rounded-t-xl"
+                    />
                   </div>
-                );
-              })}
-            </Slider>
-          </div>
+                  <div className="p-4 text-center max-w-xl">
+                    <h3 className="text-lg md:text-xl font-semibold text-white">
+                      {card.title}
+                    </h3>
+                    <p className="text-sm text-gray-400 mt-2">{card.desc}</p>
+                  </div>
+                </div>
+              );
+            } else if (position === 1) {
+              // Next
+              return (
+                <div
+                  key={card.id}
+                  className={`${baseClasses} right-0 z-10 scale-90 opacity-70`}
+                >
+                  <div className={`${imgContainer}`}>
+                    <Image
+                      src={card.img}
+                      alt={card.title}
+                      fill
+                      className="object-cover rounded-t-xl"
+                    />
+                  </div>
+                  <div className="p-2 text-center">
+                    <h3 className="text-sm font-medium line-clamp-1 text-white">
+                      {card.title}
+                    </h3>
+                  </div>
+                </div>
+              );
+            } else if (position === cards.length - 1) {
+              // Previous
+              return (
+                <div
+                  key={card.id}
+                  className={`${baseClasses} left-0 z-10 scale-90 opacity-70`}
+                >
+                  <div className={`${imgContainer}`}>
+                    <Image
+                      src={card.img}
+                      alt={card.title}
+                      fill
+                      className="object-cover rounded-t-xl"
+                    />
+                  </div>
+                  <div className="p-2 text-center">
+                    <h3 className="text-sm font-medium line-clamp-1 text-white">
+                      {card.title}
+                    </h3>
+                  </div>
+                </div>
+              );
+            }
+            return null;
+          })}
+
+          {/* Prev Button */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-30 px-3 py-2 bg-black/40 text-white rounded-full hover:bg-black/70 transition"
+          >
+            ◀
+          </button>
+
+          {/* Next Button */}
+          <button
+            onClick={handleNext}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-30 px-3 py-2 bg-black/40 text-white rounded-full hover:bg-black/70 transition"
+          >
+            ▶
+          </button>
+        </div>
+
+        {/* Dots */}
+        <div className="flex gap-2 mt-6">
+          {cards.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActiveIndex(i)}
+              className={`w-3 h-3 rounded-full transition ${
+                i === activeIndex ? "bg-yellow-400" : "bg-gray-400"
+              }`}
+            />
+          ))}
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Awards;
