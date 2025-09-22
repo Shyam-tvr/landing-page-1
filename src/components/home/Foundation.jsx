@@ -1,78 +1,105 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import VerticalCarousel from "./VerticalCarousel";
+import HorizontalCarousel from "./HorizontalCarousel";
 
-const impactsData = [
+const foundations = [
   {
-    id: 2,
-    name: "Shri. Pramod Sawant",
-    designation: "Hon'ble Chief Minister of Goa",
-    quote:
-      "Initiatives like this are a testament to India's technological leadership. I’m proud to see such innovations making a real impact in public service and human dignity.",
-    image: "/home/impact.png",
+    id: "1",
+    src: "/home/foundations/foundation1.png",
+    alt: "Nagarcoil-city",
   },
   {
-    id: 1,
-    name: "Shri. Venkaiah Naidu",
-    designation: "Hon'ble Former Vice President of India",
-    quote:
-      "I am happy about the team for inventing a robot to replace Manual Scavenging. As young professionals your commitment to use technology for the social good is worth emulation by others. Digital technology holds tremendous potential for betterment of the people and their lives.",
-    image: "/home/impact.png",
+    id: "2",
+    src: "/home/foundations/foundation2.jpg",
+    alt: "Nagarcoil-city",
   },
   {
-    id: 3,
-    name: "Mr. Anand Mahindra",
-    designation: "Chairman, Mahindra Group",
-    quote:
-      "Technology with purpose is the future. This is a brilliant example of using innovation to solve social challenges at scale.",
-    image: "/home/impact.png",
+    id: "3",
+    src: "/home/foundations/foundation3.jpg",
+    alt: "Nagarcoil-city",
   },
-];
+  {
+    id: "4",
+    src: "/home/foundations/foundation4.jpg",
+    alt: "Nagarcoil-city",
+  },
+  {
+    id: "5",
+    src: "/home/foundations/foundation5.jpg",
+    alt: "Nagarcoil-city",
+  },
+  {
+    id: "6",
+    src: "/home/foundations/foundation6.jpg",
+    alt: "Nagarcoil-city",
+  },
+  {
+    id: "7",
+    src: "/home/foundations/foundation7.jpg",
+    alt: "Nagarcoil-city",
+  },
+  {
+    id: "8",
+    src: "/home/foundations/foundation8.jpg",
+    alt: "Nagarcoil-city",
+  },
+  {
+    id: "9",
+    src: "/home/foundations/foundation9.jpg",
+    alt: "Nagarcoil-city",
+  },
+  {
+    id: "10",
+    src: "/home/foundations/foundation10.jpg",
+    alt: "Nagarcoil-city",
+  },
+  {
+    id: "11",
+    src: "/home/foundations/foundation11.jpg",
+    alt: "Nagarcoil-city",
+  },
+  {
+    id: "12",
+    src: "/home/foundations/foundation12.jpg",
+    alt: "Nagarcoil-city",
+  },
+  {
+    id: "13",
+    src: "/home/foundations/foundation13.jpg",
+    alt: "Nagarcoil-city",
+  },
+  {
+    id: "14",
+    src: "/home/foundations/foundation14.jpg",
+    alt: "Nagarcoil-city",
+  },
+  {
+    id: "15",
+    src: "/home/foundations/foundation15.jpg",
+    alt: "Nagarcoil-city",
+  },
+  {
+    id: "16",
+    src: "/home/foundations/foundation16.jpg",
+    alt: "Nagarcoil-city",
+  },
+]
+
 
 function Foundation() {
-  const [impact, setImpact] = useState(impactsData[1]);
-
-  useEffect(() => {
-    if (!impactsData) return;
-    setImpact(impactsData[1]);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setImpact((prev) => {
-        const currentIndex = impactsData.findIndex((t) => t.id === prev.id);
-        const nextIndex = (currentIndex + 1) % impactsData.length;
-        return impactsData[nextIndex];
-      });
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className="my-12">
       <div className="container mx-auto">
         <div className="px-8 flex flex-col-reverse lg:flex-row">
-          <div className="w-full h-auto flex lg:w-1/2 lg:flex-col">
-            {impactsData.map((item, index) => (
-              <div
-                className={`h-52 overflow-hidden grayscale transition-all duration-200 ease-in-out rounded-[20px] scale-[0.8] cursor-pointer border-2 border-[#efefef] hover:grayscale-0 " ${
-                  item.id === impact?.id
-                    ? "h-80 scale-100 grayscale-0 border-2 border-[#e1b837]"
-                    : ""
-                }`}
-                key={index}
-                onClick={() => setImpact(item)}
-              >
-                <Image
-                  fill
-                  src={item.image}
-                  alt={item.name}
-                  className="object-cover"
-                />
-              </div>
-            ))}
+          <div className="w-1/2 h-auto hidden lg:block">
+            <VerticalCarousel items={foundations} />
+          </div>
+          <div className="w-full h-auto flex lg:hidden">
+            <HorizontalCarousel items={foundations} />
           </div>
           <div className="w-full lg:w-1/2 p-8 h-fit">
             <div className="w-full h-48 relative">

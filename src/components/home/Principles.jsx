@@ -3,7 +3,7 @@ import React from "react";
 
 const principlesData = [
     {
-        icon:"/icons/Human-Centric-Innovation.svg",
+        icon:"/icons/human-centric-innovation.svg",
         iconWidth:86,
         title:"Human-Centric Innovation",
         desc:"Creating technology that enhances lives and values human dignity.",

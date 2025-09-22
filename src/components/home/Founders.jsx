@@ -6,7 +6,7 @@ const Founders = () => {
     <section className="px-2 md:px-16 md:py-4">
       <div className="relative w-full 2xl:max-w-[1600px] 2xl:mx-auto">
         <Image
-          src="/home/Founders.png"
+          src="/home/founders.png"
           alt="Intro background"
           width={1789}
           height={2527}

@@ -1,6 +1,7 @@
 import "./globals.css";
 import { roboto, anton, quattro } from './fonts';
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "Genrobotics",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <body className={`${roboto.variable} ${anton.variable} ${quattro.variable} bg-black font-roboto`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
