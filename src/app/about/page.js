@@ -4,6 +4,7 @@ import Intro from "@/components/about/Intro";
 import CraftingRobotics from "@/components/about/CraftingRobotics";
 import ApplyingRobotics from "@/components/about/ApplyingRobotics";
 import Wings from "@/components/about/Wings";
+import Journey from "@/components/about/Journey";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Intro />
       <CraftingRobotics />
       <ApplyingRobotics />
+      <Journey />
       <Wings />
       <Leadership />
       <Investors />

@@ -28,6 +28,16 @@ h6 { font-size: clamp(0.75rem, 0.6vw + 0.25rem, 1rem); }  /* 12–16px */
   }
 }
 
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
 .marquee-wrapper {
   overflow: hidden;
   position: relative;
