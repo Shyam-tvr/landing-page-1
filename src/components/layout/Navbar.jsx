@@ -29,7 +29,7 @@ const Navbar = () => {
           <Link href="" className="text-white font-thin text-sm sm:text-base">
             News & Blog
           </Link>
-          <Link href="" className="text-white font-thin text-sm sm:text-base">
+          <Link href="/careers" className="text-white font-thin text-sm sm:text-base">
             Careers
           </Link>
           <Link href="/about" className="text-white font-thin text-sm sm:text-base">
