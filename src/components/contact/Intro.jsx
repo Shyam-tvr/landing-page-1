@@ -5,8 +5,8 @@ const Intro = () => {
     <section className='w-full h-screen flex justify-center items-center'>
         <div className='absolute inset-0 w-full h-screen flex flex-col justify-center items-center lg:max-w-2xl mx-auto'>
           <h1 className="font-anton text-white ">
-            Who {" "}
-            <span className="text-[#FCD901]">We Are</span>
+            Get {" "}
+            <span className="text-[#FCD901]">In Touch</span>
           </h1>
         </div>
     </section>

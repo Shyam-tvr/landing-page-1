@@ -26,7 +26,7 @@ const Navbar = () => {
           <Link href="/#verticals" className="text-white font-thin text-sm sm:text-base">
             Verticals
           </Link>
-          <Link href="" className="text-white font-thin text-sm sm:text-base">
+          <Link href="/news" className="text-white font-thin text-sm sm:text-base">
             News & Blog
           </Link>
           <Link href="/careers" className="text-white font-thin text-sm sm:text-base">
@@ -39,7 +39,7 @@ const Navbar = () => {
 
         {/* Contact button */}
         <Link
-          href=""
+          href="/contact"
           className="hidden lg:flex px-3 py-1 bg-[#FCD901] rounded-lg font-medium text-sm"
         >
           Contact Us
@@ -78,23 +78,23 @@ const Navbar = () => {
         {/* Menu Links */}
         <div className="flex flex-col items-center justify-center h-full space-y-6">
           <Link
-            href="#verticals"
+            href="/#verticals"
             className="text-white font-thin text-xl"
             onClick={() => setIsOpen(false)}
           >
             Verticals
           </Link>
-          <Link href="" className="text-white font-thin text-xl" onClick={() => setIsOpen(false)}>
+          <Link href="/news" className="text-white font-thin text-xl" onClick={() => setIsOpen(false)}>
             News & Blog
           </Link>
-          <Link href="" className="text-white font-thin text-xl" onClick={() => setIsOpen(false)}>
+          <Link href="/careers" className="text-white font-thin text-xl" onClick={() => setIsOpen(false)}>
             Careers
           </Link>
           <Link href="/about" className="text-white font-thin text-xl" onClick={() => setIsOpen(false)}>
             About Us
           </Link>
           <Link
-            href=""
+            href="/contact"
             className="px-4 py-2 bg-[#FCD901] rounded-lg font-medium text-base"
             onClick={() => setIsOpen(false)}
           >

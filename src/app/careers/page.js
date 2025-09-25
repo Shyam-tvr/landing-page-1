@@ -4,7 +4,7 @@ import Intro from "@/components/careers/Intro";
 import JobSearch from "@/components/careers/JobSearch";
 import Strength from "@/components/careers/Strength";
 
-export default function Home() {
+export default function Careers() {
   return (
     <>
         <Intro />

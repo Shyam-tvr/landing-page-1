@@ -6,7 +6,7 @@ import ApplyingRobotics from "@/components/about/ApplyingRobotics";
 import Wings from "@/components/about/Wings";
 import Journey from "@/components/about/Journey";
 
-export default function Home() {
+export default function About() {
   return (
     <div>
       <Intro />
