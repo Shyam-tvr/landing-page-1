@@ -5,6 +5,7 @@ import CraftingRobotics from "@/components/about/CraftingRobotics";
 import ApplyingRobotics from "@/components/about/ApplyingRobotics";
 import Wings from "@/components/about/Wings";
 import Journey from "@/components/about/Journey";
+import Founders from "@/components/about/Founders";
 
 export default function About() {
   return (
@@ -14,6 +15,7 @@ export default function About() {
       <ApplyingRobotics />
       <Journey />
       <Wings />
+      <Founders />
       <Leadership />
       <Investors />
     </div>

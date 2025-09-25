@@ -132,7 +132,7 @@ const Awards = () => {
 
       {/* Carousel */}
       <div className="relative flex flex-col items-center w-full max-w-6xl mx-auto mt-12">
-        <div className="relative flex items-center justify-center w-full h-[540px] overflow-hidden">
+        <div className="relative flex items-center justify-center w-full h-72 md:h-[540px] overflow-hidden">
           {cards.map((card, index) => {
             const position =
               (index - activeIndex + cards.length) % cards.length;

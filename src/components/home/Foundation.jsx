@@ -94,14 +94,14 @@ function Foundation() {
   return (
     <section className="my-12">
       <div className="container mx-auto">
-        <div className="px-8 flex flex-col-reverse lg:flex-row">
+        <div className="md:px-8 flex flex-col-reverse lg:flex-row">
           <div className="w-1/2 h-auto hidden lg:block">
             <VerticalCarousel items={foundations} />
           </div>
-          <div className="w-full h-auto flex lg:hidden">
+          <div className="w-full h-auto flex lg:hidden p-4">
             <HorizontalCarousel items={foundations} />
           </div>
-          <div className="w-full lg:w-1/2 p-8 h-fit">
+          <div className="w-full lg:w-1/2 p-4 md:p-8 h-fit">
             <div className="w-full h-48 relative">
               <Image src="/icons/foundation-logo.svg" alt="" fill />
             </div>

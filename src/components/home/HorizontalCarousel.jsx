@@ -84,7 +84,7 @@ export default function HorizontalCarousel({ items, autoRotateInterval = 1500 })
       >
         {/* Previous Item */}
         <div
-          className="absolute left-6 top-1/2 -translate-y-1/2 w-1/4 h-[10rem] transition-all duration-700 ease-in-out transform cursor-pointer scale-90 opacity-40 hover:scale-95 hover:opacity-60"
+          className="absolute hidden md:block left-6 top-1/2 -translate-y-1/2 w-1/4 h-[10rem] transition-all duration-700 ease-in-out transform cursor-pointer scale-90 opacity-40 hover:scale-95 hover:opacity-60"
           onClick={() => setCurrentIndex(prevIndex)}
         >
           <img
@@ -96,7 +96,7 @@ export default function HorizontalCarousel({ items, autoRotateInterval = 1500 })
         </div>
 
         {/* Current Item */}
-        <div className="relative w-1/2 h-[14rem] z-10 transition-all duration-700 ease-in-out transform cursor-pointer scale-105">
+        <div className="relative w-full md:w-1/2 h-[14rem] z-10 transition-all duration-700 ease-in-out transform cursor-pointer scale-105">
           <img
             src={items[currentIndex].src}
             alt={items[currentIndex].alt}
@@ -107,7 +107,7 @@ export default function HorizontalCarousel({ items, autoRotateInterval = 1500 })
 
         {/* Next Item */}
         <div
-          className="absolute right-6 top-1/2 -translate-y-1/2 w-1/4 h-[10rem] transition-all duration-700 ease-in-out transform cursor-pointer scale-90 opacity-40 hover:scale-95 hover:opacity-60"
+          className="absolute hidden md:block  right-6 top-1/2 -translate-y-1/2 w-1/4 h-[10rem] transition-all duration-700 ease-in-out transform cursor-pointer scale-90 opacity-40 hover:scale-95 hover:opacity-60"
           onClick={() => setCurrentIndex(nextIndex)}
         >
           <img
