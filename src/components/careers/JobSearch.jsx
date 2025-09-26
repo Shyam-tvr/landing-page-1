@@ -4,15 +4,15 @@ import { useState } from "react";
 const JobSearch = () => {
   const [showMore, setShowMore] = useState(false);
   return (
-    <section className="py-24 px-12">
+    <section className="px-4 py-12 md:px-12">
       <h1 className="font-anton text-white text-center">
         Begin Your Search{" "}
-        <span className="text-[#FCD901]">For Greater Opportunities</span>
+        <span className="text-[#FCD901] block md:inline">For Greater Opportunities</span>
       </h1>
       <form className="p-6 mt-12 bg-gradient-to-r from-black/0 to-[#FCD901]/15 rounded-lg">
-        <div className="flex gap-8">
+        <div className="flex flex-col md:flex-row gap-8">
           <div className="flex-10">
-            <div className="flex gap-8 space-y-2">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-8 space-y-2">
               <div className="flex-1 space-y-2">
                 <label className="text-white block">Search by Keyword</label>
                 <input className="bg-white w-full" />
@@ -23,7 +23,7 @@ const JobSearch = () => {
               </div>
             </div>
             <p
-              className="text-gray-400 text-xs cursor-pointer"
+              className="text-gray-400 text-xs cursor-pointer mt-4 md:mt-0"
               onClick={() => setShowMore(!showMore)}
             >
               Show More Options
@@ -38,8 +38,8 @@ const JobSearch = () => {
         </div>
         <div className={showMore ? "" : "hidden"}>
           <hr className="mt-4 mb-2" />
-          <div className="flex">
-            <div className="flex flex-10 gap-8 space-y-2 mr-8">
+          <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row flex-10 gap-8 space-y-2 mr-8">
               <div className="flex-1 space-y-2">
                 <label className="text-white block">Search by Keyword</label>
                 <input className="bg-white w-full" />

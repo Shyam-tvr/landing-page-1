@@ -5,11 +5,13 @@ import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const handleClick = () => {
+    window.location.href = "https://genrobotics.com";
+  };
   return (
     <nav className="absolute top-0 w-full z-20 px-4 sm:px-8 lg:px-12 py-4 sm:py-6 lg:py-8 flex items-center justify-between bg-transparent">
       {/* Logo */}
-      <div className="flex-shrink-0">
+      <div className="flex-shrink-0" onClick={handleClick}>
         <Image
           src="/layout/gen-logo.svg"
           alt="logo"

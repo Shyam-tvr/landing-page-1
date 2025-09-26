@@ -4,9 +4,10 @@ import React, { useState, useRef, useEffect } from "react";
 
 const Strength = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [containerHeight, setContainerHeight] = useState(250)
   const scrollContainerRef = useRef(null);
-  const itemRefs = useRef([]); // store refs for each scrollable item
-
+  const containerRef = useRef(null)
+  const itemRefs = useRef([]);
   const data = [
     {
       image: "/careers/workers.png",
@@ -53,6 +54,9 @@ const Strength = () => {
       if (el) observer.observe(el);
     });
 
+    
+    setContainerHeight(containerRef?.current?.offsetHeight + 30)
+
     return () => {
       if (observer) {
         itemRefs.current.forEach((el) => {
@@ -63,7 +67,7 @@ const Strength = () => {
   }, []);
 
   return (
-    <section className="px-12 h-screen">
+    <section className="px-4 md:px-12 h-screen">
       {/* --- Top 3 reasons --- */}
       <div className="w-full h-fit flex my-12">
         {/* ... your existing top 3 cards ... */}
@@ -71,7 +75,7 @@ const Strength = () => {
 
       {/* --- Scroll + Active Titles --- */}
       <div className="flex gap-4 my-16">
-        <ul className="flex-5 list-none space-y-8">
+        <ul className="hidden md:flex-5 list-none space-y-8">
           {data.map(({ title }, i) => (
             <li
               key={i}
@@ -83,7 +87,7 @@ const Strength = () => {
             </li>
           ))}
         </ul>
-        <div className="flex-7 space-y-8">
+        <div className="md:flex-7 space-y-8">
           <div>
             <h1 className="font-anton text-white ">
               Our Culture is <span className="text-[#FCD901]">Our Strength</span>
@@ -99,7 +103,8 @@ const Strength = () => {
           {/* Scrollable container */}
           <div
             ref={scrollContainerRef}
-            className="space-y-8 h-[36rem] overflow-y-scroll"
+            className="space-y-8 overflow-y-scroll"
+            style={{height:containerHeight}}
           >
             {data.map((item, i) => (
               <div
@@ -108,17 +113,22 @@ const Strength = () => {
                 ref={(el) => (itemRefs.current[i] = el)}
                 className="space-y-2"
               >
-                <div className="relative w-full aspect-video">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="rounded-lg"
-                  />
+                <div ref={containerRef}>
+                  <div className="relative w-full aspect-video">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="rounded-lg"
+                    />
+                  </div>
+                  <p className="text-white">{item.desc}</p>
                 </div>
-                <p className="text-white">{item.desc}</p>
               </div>
             ))}
+          </div>
+          <div>
+              <p className="text-[#FCD901] text-center font-anton text-2xl tracking-wide">{data[activeIndex].title}</p>
           </div>
         </div>
       </div>

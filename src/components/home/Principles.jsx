@@ -116,7 +116,7 @@ const Principles = () => {
         <div
           ref={containerRef}
           onScroll={onScroll}
-          className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar -mx-2 px-2"
+          className="flex overflow-x-auto snap-x snap-mandatory -mx-2 px-2"
         >
           {principlesData.map((principle, index) => (
             <div

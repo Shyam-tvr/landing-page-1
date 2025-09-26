@@ -17,6 +17,13 @@ const content = [
     name: "Anand Mahindra",
     designation: "Chairman, Mahindra Group",
   },
+  {
+    message:
+      "I’ve witnessed Genrobotics’ remarkable journey since their first Green Talk—transforming sanitation with robots that take on work no human should endure. From deploying 300 robots across 21 states to growing profitably by 250%, they are leading India’s National Namaste Mission to end manual scavenging once and for all.",
+    image: "/home/testmonials/adhani.webp",
+    name: "Gautam Adani",
+    designation: "The founder and chairman of the Adani Group",
+  },
 ];
 
 const Testimonials = () => {

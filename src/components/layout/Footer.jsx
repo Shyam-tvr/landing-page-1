@@ -4,10 +4,10 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="bg-black px-10 py-5 text-white min-h-80 flex items-center">
-      <div className="flex flex-col md:flex-row md:justify-between items-center text-center md:text-left md:items-start flex-wrap gap-8 container mx-auto">
+      <div className="flex flex-col md:flex-row md:justify-between text-center md:text-left flex-wrap gap-8 container mx-auto">
         <div className="flex-1 min-w-48">
-          <div className="w-80 h-full overflow-hidden">
-            <Image src="/layout/gen-logo.svg" alt="Genrobotics Logo" width={0} height={0} className="w-full h-full"/>
+          <div className="relative w-48 md:w-80 h-12 overflow-hidden">
+            <Image src="/layout/gen-logo.svg" alt="Genrobotics Logo" fill/>
           </div>
           <div className="mt-5 flex gap-4">
             <a href="https://x.com/GenRobotic" target="_blank" className="relative inline-flex w-10 h-10 p-3 bg-[#2b2b2b] text-white rounded-full justify-center items-center">
@@ -30,9 +30,9 @@ const Footer = () => {
             <li className="mt-3"> 
               <Link href="/about" className="text-white decoration-0">About us</Link>
             </li>
-            <li className="mt-3">
+            {/* <li className="mt-3">
               <Link href="/#solutions" className="text-white decoration-0">Solutions</Link>
-            </li>
+            </li> */}
             <li className="mt-3">
               <Link href="/#services" className="text-white decoration-0">CSR</Link>
             </li>
@@ -44,11 +44,14 @@ const Footer = () => {
             <li className="mt-3">
               <Link href="/vendor-registration" className="text-white decoration-0">Be a vendor</Link>
             </li>
-            <li className="mt-3">
+            {/* <li className="mt-3">
               <Link href="/CSR" className="text-white decoration-0">Services</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
+      </div>
+      <div>
+        
       </div>
     </footer>
   );

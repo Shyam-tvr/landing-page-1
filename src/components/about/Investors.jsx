@@ -38,7 +38,7 @@ const investorsData = [
     designation: "Co-Founder",
   },
   {
-    image: "/about/investors/uiv-founder.png",
+    image: "/about/investors/uiv-founder2.png",
     company: "uiv",
     logo: "/about/investors/uiv-logo.svg",
     name: "Anil Joshy",

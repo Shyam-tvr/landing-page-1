@@ -69,7 +69,7 @@ export default function HorizontalCarousel({ items, autoRotateInterval = 1500 })
   return (
     <div className="w-full">
       <div
-        className="relative w-full h-[20rem] mx-auto overflow-hidden flex items-center justify-center gap-4"
+        className="relative w-full mt-8 lg:h-[20rem] mx-auto overflow-hidden flex items-center justify-center gap-4"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}

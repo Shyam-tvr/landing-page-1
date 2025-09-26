@@ -31,7 +31,7 @@ const Intro = () => {
       />
 
       {/* Overlay Content */}
-      <div className="absolute inset-0 flex flex-col items-center px-4 text-center mx-auto space-y-4 mt-24 md:mt-36 lg:mt-40 xl:mt-56 2xl:mt-64 max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl lg:space-y-8">
+      <div className="absolute inset-0 flex flex-col items-center px-4 text-center mx-auto space-y-4 mt-24 md:mt-36 lg:mt-40 xl:mt-56 2xl:mt-64 max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl lg:space-y-8 min-h-screen">
         <h1 className="font-anton text-white ">
           An Extension of{" "}
           <span className="text-[#FCD901]">Human Potential</span>
