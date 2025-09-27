@@ -87,8 +87,8 @@ const Strength = () => {
             </li>
           ))}
         </ul>
-        <div className="md:flex-7 space-y-8">
-          <div>
+        <div className="md:flex-7">
+          <div className="mb-8">
             <h1 className="font-anton text-white ">
               Our Culture is <span className="text-[#FCD901]">Our Strength</span>
             </h1>
@@ -99,7 +99,9 @@ const Strength = () => {
               solvers is united by a shared mission.
             </h5>
           </div>
-
+              <div>
+                  <p className="text-[#FCD901] font-anton text-2xl tracking-wide mb-4">{data[activeIndex].title}</p>
+              </div>
           {/* Scrollable container */}
           <div
             ref={scrollContainerRef}
@@ -126,9 +128,6 @@ const Strength = () => {
                 </div>
               </div>
             ))}
-          </div>
-          <div>
-              <p className="text-[#FCD901] text-center font-anton text-2xl tracking-wide">{data[activeIndex].title}</p>
           </div>
         </div>
       </div>
