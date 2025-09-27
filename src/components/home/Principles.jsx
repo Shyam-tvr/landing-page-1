@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 
 const principlesData = [
@@ -92,12 +92,6 @@ const Principles = () => {
     }, 80);
   };
 
-  useEffect(() => {
-    const onResize = () => scrollToIndex(activeIndex);
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, [activeIndex]);
-
   return (
     <section className="relative w-full px-4 md:px-12 py-8 lg:pt-24">
       <div className="w-full max-w-6xl mx-auto text-center space-y-4">
@@ -111,6 +105,7 @@ const Principles = () => {
           create.
         </h4>
       </div>
+
       {/* Mobile carousel */}
       <div className="relative lg:hidden mt-8">
         <div
@@ -189,7 +184,7 @@ const Principles = () => {
       </div>
 
       {/* Desktop grid */}
-      <div className="w-full max-w-6xl lg:flex flex-wrap justify-center gap-8 mt-12 mx-auto hidden ">
+      <div className="w-full max-w-6xl lg:flex flex-wrap justify-center gap-8 mt-12 mx-auto hidden">
         {principlesData.map((principle, index) => (
           <div
             key={index}
