@@ -77,16 +77,15 @@ const news = [
 const Articles = () => {
   const imgRef = useRef(null);
   const [leftHeight, setLeftHeight] = useState(0);
+  const [isMobile, setIsMobile] = useState(false)
 
-  console.log(leftHeight);
-  
-
-  useEffect(() => {
-    if (imgRef.current) {
-      setLeftHeight(imgRef.current.offsetHeight);
+ useEffect(() => {
+    const checkScreen = () => setIsMobile(window.innerWidth < 768); // md breakpoint
+    checkScreen();
+    if (window.innerWidth > 768 && imgRef.current) {
       console.log(imgRef.current.offsetHeight);
-      
-    }
+      setLeftHeight(imgRef.current.offsetHeight);
+     }
   }, []);
 
   return (
@@ -100,7 +99,7 @@ const Articles = () => {
           <div ref={imgRef} className="relative w-full aspect-square">
             <Image src={latestNews.image} alt={latestNews.heading} fill />
           </div>
-          <div className="absolute inset-0 justify-end flex flex-col p-4 max-w-lg aspect-square bg-gradient-to-b from-black/0 to to-black/80">
+          <div className="absolute inset-0 justify-end flex flex-col p-4 aspect-square bg-gradient-to-b from-black/0 to to-black/80">
             <h3 className="text-white font-anton">{latestNews.heading}</h3>
             <div className="flex gap-2">
               <Image
@@ -116,7 +115,7 @@ const Articles = () => {
         </div>
 
         {/* Right Section with scroll */}
-        <div className={`flex-7 space-y-4 max-h-96 lg:max-h-auto overflow-y-scroll pr-2 mt-4 lg:mt-0 `} style={{height:leftHeight}}>
+        <div className={`flex-7 space-y-4 ${isMobile && "max-h-96"} overflow-y-scroll pr-2 mt-4 lg:mt-0 `} style={{height:leftHeight}}>
           {news.map((item, i) => (
             <div key={i} className="flex gap-4 flex-col lg:flex-row p-4 bg-[#121212] rounded-xl shrink-0">
               <div className="relative w-full lg:w-1/3 aspect-video rounded-xl">

@@ -75,7 +75,7 @@ const Strength = () => {
 
       {/* --- Scroll + Active Titles --- */}
       <div className="flex gap-4 my-16">
-        <ul className="hidden md:flex-5 list-none space-y-8">
+        <ul className="hidden md:block flex-5 list-none space-y-8">
           {data.map(({ title }, i) => (
             <li
               key={i}
@@ -99,7 +99,7 @@ const Strength = () => {
               solvers is united by a shared mission.
             </h5>
           </div>
-              <div>
+              <div className="md:hidden">
                   <p className="text-[#FCD901] font-anton text-2xl tracking-wide mb-4">{data[activeIndex].title}</p>
               </div>
           {/* Scrollable container */}
