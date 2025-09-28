@@ -75,7 +75,7 @@ const Strength = () => {
 
       {/* --- Scroll + Active Titles --- */}
       <div className="flex gap-4 my-16">
-        <ul className="hidden md:block flex-5 list-none space-y-8">
+        <ul className="hidden md:block flex-5 list-none space-y-8 mt-48">
           {data.map(({ title }, i) => (
             <li
               key={i}

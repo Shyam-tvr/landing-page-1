@@ -152,7 +152,7 @@ const Awards = () => {
                       className="object-contain rounded-t-xl"
                     />
                   </div>
-                  <div className="p-4 text-center max-w-xl">
+                  <div className="p-4 text-center">
                     <h3 className="text-lg md:text-xl font-semibold text-white">
                       {card.title}
                     </h3>

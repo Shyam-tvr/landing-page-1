@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function VerticalCarousel({ items, autoRotateInterval = 1500 }) {
+export default function VerticalCarousel({ items, autoRotateInterval = 2000 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 

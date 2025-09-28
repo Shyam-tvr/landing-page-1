@@ -37,11 +37,6 @@ const Testimonials = () => {
             What Leaders Are Saying
           </span>
         </h1>
-        <h4 className="text-white">
-          Our values are the bedrock of our culture and the blueprint for our
-          actions. They guide every decision we make and every technology we
-          create.
-        </h4>
       </div>
 
       {/* Scrolling Testimonials */}

@@ -102,7 +102,7 @@ function Foundation() {
             <HorizontalCarousel items={foundations} />
           </div>
           <div className="w-full lg:w-1/2 p-4 md:p-8 h-fit">
-            <div className="w-full h-48 relative">
+            <div className="w-[70%] aspect-[17/6] mx-auto lg:mx-0 relative">
               <Image src="/icons/foundation-logo.svg" alt="" fill />
             </div>
             <div>

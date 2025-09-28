@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-black px-10 py-5 text-white min-h-80 flex items-center">
       <div className="flex flex-col md:flex-row md:justify-between text-center md:text-left flex-wrap gap-8 container mx-auto">
         <div className="flex-1 min-w-48">
-          <div className="relative w-48 md:w-80 h-12 overflow-hidden">
+          <div className="relative w-[250px] aspect-[344/79] overflow-hidden">
             <Image src="/layout/gen-logo.svg" alt="Genrobotics Logo" fill/>
           </div>
           <div className="mt-5 flex gap-4">

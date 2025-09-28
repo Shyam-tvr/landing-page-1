@@ -6,7 +6,7 @@ import React, { useState } from "react";
 const verticalsData = [
   {
     title: "Sanitation Tech",
-    desc: "Revolutionizing urban hygiene with the Bandicoot robot, eliminating hazardous confined space cleaning such as manhole, sewage, storm water drain etc. to ensure worker safety and dignity.",
+    desc: "Our Clean Tech vertical is revolutionizing the cleaning of confined spaces such as manholes, sewers, STP tanks, and drains. We improve safety and efficiency by deploying advanced robotics in these hazardous environments.",
     subtitle: "Step into the revolution",
     img: "/home/clean-tech.png",
     gradient: "bg-gradient-to-b from-[#FCD901] to-[#ffffff00]",
@@ -14,7 +14,7 @@ const verticalsData = [
   },
   {
     title: "Medical & Mobility",
-    desc: "Our G Gaiter, an advanced robotic gait trainer, empowers patients in neurorehabilitation, helping them regain mobility, independence, and confidence.",
+    desc: "This division is revolutionizing physical medicine and rehabilitation with advanced technologies like robotic gait trainers and upper-body robotic rehabilitation systems, helping individuals regain mobility and independence.",
     subtitle: "Explore Healthcare Innovation",
     img: "/home/medical-mobility.png",
     gradient: "bg-gradient-to-t from-[#FCD901] to-[#ffffff00]",
@@ -22,7 +22,7 @@ const verticalsData = [
   },
   {
     title: "Oil & Gas",
-    desc: "In collaboration with IOCL, we developed Draco, a robotic solution for cleaning crude oil tanks, enhancing safety and efficiency in the industry.",
+    desc: "In this sector, we use robotic solutions for eliminating risks in the oil and gas industries, particularly for hazardous tasks such as confined space cleaning.",
     subtitle: "Learn More",
     img: "/home/oil-gas.png",
     gradient: "bg-gradient-to-b from-[#FCD901] to-[#ffffff00]",
@@ -30,7 +30,7 @@ const verticalsData = [
   },
   {
     title: "Robotics & AI Research",
-    desc: "Through a partnership with Zoho, we are developing humanoid hardware like Genbot and GBot, enhancing India's capabilities in the global robotics landscape.",
+    desc: "R&D is our deep research and development wing where we are researching new future technologies including bipedal walking, humanoid and semi-humanoid robotics.",
     subtitle: "Discover Our Research",
     img: "/home/robotics.png",
     gradient: "bg-gradient-to-t from-[#FCD901] to-[#ffffff00]",
